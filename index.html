@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nome e Nome faranno il grande passo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCF6EE;--gold:#CD9D53;--gold-deep:#9A6E2A;--ink:#34291A;--line:#E6D5BC;
+  --serif:"Cormorant Garamond","Cormorant","Garamond",Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 1.3rem/1.6 var(--serif)}
+a{color:var(--gold-deep);text-decoration-thickness:1px;text-underline-offset:4px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold-deep);outline-offset:4px}
+h1,h2,h3{font-weight:400;margin:0;line-height:1.1}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+
+nav{position:sticky;top:0;z-index:5;background:rgba(252,246,238,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:1.6rem;overflow-x:auto;white-space:nowrap}
+nav a{padding:.9rem 0;text-decoration:none;color:var(--ink);font-size:1.1rem}
+nav a:hover{color:var(--gold-deep);text-decoration:underline}
+
+/* Hero: solo testo, come nel template */
+.hero{padding:5rem 0 4rem}
+.hero h1{font-size:clamp(2.8rem,9vw,7rem);text-transform:uppercase;color:var(--gold);letter-spacing:.005em;max-width:16em}
+.hero .meta{margin-top:2rem;font-size:1.6rem;color:var(--gold-deep)}
+.hero .meta p{margin:0}
+#count{margin-top:.3rem!important;font-style:italic}
+
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;max-width:18em}
+h3{font-size:1.3rem;color:var(--ink);margin-bottom:1.2rem}
+.lead{max-width:36rem;margin:0 0 2rem}
+
+.cols{display:grid;gap:2.5rem}
+@media(min-width:720px){.cols{grid-template-columns:1fr 1fr;max-width:44rem}}
+.cols .name{display:block;font-size:1.7rem;color:var(--gold-deep);margin-bottom:1.2rem}
+.cols p{margin:0;font-size:1.5rem;color:var(--gold-deep);line-height:1.5}
+
+.rows{list-style:none;margin:0;padding:0;max-width:44rem}
+.rows li{display:grid;grid-template-columns:6rem 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.rows time{font-size:1.7rem;color:var(--gold-deep)}
+p{max-width:42rem}
+
+.btn{display:inline-block;margin-top:.5rem;padding:.75rem 2rem;border:1px solid var(--gold-deep);background:transparent;color:var(--gold-deep);font:500 1.2rem var(--serif);text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover,.btn.solid{background:var(--gold-deep);color:var(--bg)}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+
+details{border-top:1px solid var(--line);padding:1rem 0;max-width:44rem}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-size:1.6rem;color:var(--ink)}
+details p{margin:.6rem 0 0}
+
+#fortuna p.hint{font-style:italic;color:var(--gold-deep);margin-top:1rem;min-height:1.6em}
+/* Foto */
+.photo{margin:0;position:relative;overflow:hidden;background:#F1E6D4}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.photo.wide{aspect-ratio:4/3}
+.photo.portrait{aspect-ratio:4/5}
+@media(min-width:720px){.photo.wide{aspect-ratio:21/9}}
+.photo.empty img{display:none}
+.photo.empty{display:flex;align-items:center;justify-content:center;border:1px dashed var(--gold);padding:1rem;text-align:center;color:var(--gold-deep);font-size:1.2rem}
+.photo.empty::after{content:"Qui va la vostra foto: " attr(data-slot)}
+.band{padding-top:4.5rem}
+#dove{border-top:0;padding-top:1rem}
+.intro{margin:3rem 0 0}
+.dove-grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.dove-grid{grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}}
+.dove-grid .cols{grid-template-columns:1fr 1fr;max-width:none}
+footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--gold-deep);font-size:1.5rem}
+footer p{margin:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Sezioni del sito"><div class="wrap">
+  <a href="#dove">Dove</a>
+  <a href="#programma">Programma</a>
+  <a href="#arrivare">Come arrivare</a>
+  <a href="#dormire">Dove dormire</a>
+  <a href="#rsvp">Conferma</a>
+  <a href="#info">Info utili</a>
+  <a href="#fortuna">Fortuna</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Nome e Nome faranno il grande passo</h1>
+  <div class="meta">
+    <p>12 giugno 2027</p>
+    <p id="count" aria-live="polite"></p>
+  </div>
+</div></header>
+
+<section id="dove"><div class="wrap dove-grid">
+  <div>
+  <div class="cols">
+    <div>
+      <h3>Cerimonia</h3>
+      <a class="name" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Esempio+1+Citta" target="_blank" rel="noopener">Nome della chiesa</a>
+      <p>Via di esempio 1<br>Città (XX)<br>16:00</p>
+    </div>
+    <div>
+      <h3>Ricevimento</h3>
+      <a class="name" href="https://www.google.com/maps/search/?api=1&amp;query=Strada+Esempio+2+Citta" target="_blank" rel="noopener">Nome dell’agriturismo</a>
+      <p>Strada di esempio 2<br>Città (XX)<br>17:30 – 02:00</p>
+    </div>
+  </div>
+  <p class="lead intro">Dopo tanti anni insieme abbiamo deciso di fare il grande passo, e vogliamo farlo circondati dalle persone a cui vogliamo bene. Qui trovate tutto quello che serve per organizzarvi.</p>
+  </div>
+  <figure class="photo portrait" data-slot="foto/coppia-1.jpg">
+    <img src="foto/coppia-1.jpg" alt="Nome e Nome insieme" width="1000" height="1250" onerror="this.parentNode.classList.add('empty')">
+  </figure>
+</div></section>
+
+<section id="programma"><div class="wrap">
+  <h2>Programma della giornata</h2>
+  <ul class="rows">
+    <li><time>15:30</time><div><strong>Arrivo degli ospiti</strong><br>Vi aspettiamo davanti alla chiesa.</div></li>
+    <li><time>16:00</time><div><strong>Cerimonia</strong><br>Dura circa un’ora.</div></li>
+    <li><time>17:30</time><div><strong>Aperitivo</strong><br>Nel giardino del ricevimento.</div></li>
+    <li><time>19:30</time><div><strong>Cena</strong><br>Ci sediamo a tavola.</div></li>
+    <li><time>22:00</time><div><strong>Torta e festa</strong><br>Si balla fino a tardi.</div></li>
+  </ul>
+</div></section>
+
+<section id="arrivare"><div class="wrap">
+  <h2>Come arrivare</h2>
+  <p><strong>In auto.</strong> Uscita autostradale di Città, poi seguire le indicazioni per il ricevimento. Parcheggio gratuito presso la struttura.</p>
+  <p><strong>In treno.</strong> Stazione di Città, a circa 15 minuti di auto. Dopo la cerimonia sarà attiva una navetta (orari da definire).</p>
+  <p><strong>In aereo.</strong> L’aeroporto più vicino è Nome Aeroporto, a circa un’ora di distanza.</p>
+</div></section>
+
+<section id="dormire"><div class="wrap">
+  <h2>Dove dormire</h2>
+  <p class="lead">In estate la zona si riempie in fretta: prenotate con anticipo.</p>
+  <div class="cols">
+    <div><h3>Hotel Esempio</h3><p>A 5 minuti dal ricevimento.</p><p><a href="https://example.com" target="_blank" rel="noopener">Sito web</a></p></div>
+    <div><h3>B&amp;B Esempio</h3><p>Nel centro del paese. Citate il nostro nome per la tariffa dedicata.</p><p><a href="https://example.com" target="_blank" rel="noopener">Sito web</a></p></div>
+  </div>
+</div></section>
+
+<div class="wrap band">
+  <figure class="photo wide" data-slot="foto/coppia-2.jpg">
+    <img src="foto/coppia-2.jpg" alt="Nome e Nome in un momento felice" width="1600" height="686" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+  </figure>
+</div>
+
+<section id="rsvp"><div class="wrap">
+  <h2>Confermate la vostra presenza</h2>
+  <p class="lead">Fateci sapere entro il <strong>30 aprile 2027</strong> se ci siete, quante persone siete e se avete intolleranze o esigenze alimentari.</p>
+  <a class="btn solid" href="mailto:indirizzo@esempio.it?subject=Conferma%20presenza&amp;body=Nome%20e%20cognome%3A%0AN.%20persone%3A%0AIntolleranze%3A">Conferma via email</a>
+  <!-- Alternativa: sostituite il link sopra con quello di un Google Form -->
+</div></section>
+
+<section id="info"><div class="wrap">
+  <h2>Info utili</h2>
+  <details><summary>Dress code</summary><p>Elegante, ma comodo: la festa è all’aperto e in giardino. Meglio scarpe adatte a erba o ghiaia.</p></details>
+  <details><summary>Lista nozze e regali</summary><p>La vostra presenza è il regalo più bello. Se volete farci un pensiero, potete contribuire al nostro viaggio. IBAN: <em>da inserire</em>.</p></details>
+  <details><summary>Possiamo portare i bambini?</summary><p>Certo! Ci sarà uno spazio dedicato a loro. Indicateli nella conferma di presenza.</p></details>
+  <details><summary>E se piove?</summary><p>Il ricevimento ha una sala interna: la festa si farà comunque.</p></details>
+  <details><summary>Chi contattare per dubbi?</summary><p>Scriveteci a <a href="mailto:indirizzo@esempio.it">indirizzo@esempio.it</a> oppure chiamate il testimone: <a href="tel:+390000000000">+39 000 000 0000</a>.</p></details>
+</div></section>
+
+<section id="fortuna"><div class="wrap">
+  <h2>Black metal o reggaeton? Tenta la fortuna!</h2>
+  <p class="lead">Un clic, una canzone scelta a caso da noi. Che il destino sia con voi.</p>
+  <button class="btn solid" id="tenta" type="button">Tenta la fortuna</button>
+  <p class="hint" id="hint" aria-live="polite"></p>
+</div></section>
+
+<footer><div class="wrap"><p>Nome e Nome · 12 giugno 2027</p></div></footer>
+
+<script>
+(function(){
+  /* Conto alla rovescia */
+  var DATE = new Date("2027-06-12T16:00:00+02:00");
+  var d = Math.ceil((DATE - new Date()) / 86400000);
+  document.getElementById("count").textContent =
+    d > 1 ? "Mancano " + d + " giorni" : d === 1 ? "Manca un giorno" : d === 0 ? "È oggi!" : "Grazie di aver festeggiato con noi";
+
+  /* Easter egg: incollate qui gli URL YouTube che volete. */
+  var BLACK_METAL = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ];
+  var REGGAETON = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ];
+  var ALL = BLACK_METAL.concat(REGGAETON), last = -1;
+
+  function rnd(n){
+    var a = new Uint32Array(1);
+    window.crypto.getRandomValues(a);
+    return a[0] % n;
+  }
+  document.getElementById("tenta").addEventListener("click", function(){
+    var i; do { i = rnd(ALL.length); } while (ALL.length > 1 && i === last);
+    last = i;
+    /* window.open parte subito dal clic, così il browser non lo blocca come popup */
+    var w = window.open(ALL[i], "_blank");
+    if (w) { w.opener = null; }
+    else { window.location.href = ALL[i]; }
+    document.getElementById("hint").textContent = "Il destino ha scelto. Se non si è aperto nulla, consentite i popup per questo sito.";
+  });
+})();
+</script>
+</body>
+</html>
