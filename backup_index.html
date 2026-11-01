@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chiara e Alessandro si Sposano!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCF6EE;--gold:#CD9D53;--gold-deep:#9A6E2A;--ink:#34291A;--line:#E6D5BC;
+  --serif:"Cormorant Garamond","Cormorant","Garamond",Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 1.3rem/1.6 var(--serif)}
+a{color:var(--gold-deep);text-decoration-thickness:1px;text-underline-offset:4px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold-deep);outline-offset:4px}
+h1,h2,h3{font-weight:400;margin:0;line-height:1.1}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+
+nav{position:sticky;top:0;z-index:5;background:rgba(252,246,238,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:1.6rem;overflow-x:auto;white-space:nowrap}
+nav a{padding:.9rem 0;text-decoration:none;color:var(--ink);font-size:1.1rem}
+nav a:hover{color:var(--gold-deep);text-decoration:underline}
+
+/* Hero: solo testo, come nel template */
+.hero{padding:5rem 0 4rem}
+.hero h1{font-size:clamp(2.8rem,9vw,7rem);text-transform:uppercase;color:var(--gold);letter-spacing:.005em;max-width:16em}
+.hero .meta{margin-top:2rem;font-size:1.6rem;color:var(--gold-deep)}
+.hero .meta p{margin:0}
+#count{margin-top:.3rem!important;font-style:italic}
+
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;max-width:18em}
+h3{font-size:1.3rem;color:var(--ink);margin-bottom:1.2rem}
+.lead{max-width:36rem;margin:0 0 2rem}
+
+.cols{display:grid;gap:2.5rem}
+@media(min-width:720px){.cols{grid-template-columns:1fr 1fr;max-width:44rem}}
+.cols .name{display:block;font-size:1.7rem;color:var(--gold-deep);margin-bottom:1.2rem}
+.cols p{margin:0;font-size:1.5rem;color:var(--gold-deep);line-height:1.5}
+
+.rows{list-style:none;margin:0;padding:0;max-width:44rem}
+.rows li{display:grid;grid-template-columns:6rem 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.rows time{font-size:1.7rem;color:var(--gold-deep)}
+p{max-width:42rem}
+
+.btn{display:inline-block;margin-top:.5rem;padding:.75rem 2rem;border:1px solid var(--gold-deep);background:transparent;color:var(--gold-deep);font:500 1.2rem var(--serif);text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover,.btn.solid{background:var(--gold-deep);color:var(--bg)}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+
+details{border-top:1px solid var(--line);padding:1rem 0;max-width:44rem}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-size:1.6rem;color:var(--ink)}
+details p{margin:.6rem 0 0}
+
+#fortuna p.hint{font-style:italic;color:var(--gold-deep);margin-top:1rem;min-height:1.6em}
+/* Foto */
+.photo{margin:0;position:relative;overflow:hidden;background:#F1E6D4}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.photo.wide{aspect-ratio:4/3}
+.photo.portrait{aspect-ratio:4/5}
+@media(min-width:720px){.photo.wide{aspect-ratio:21/9}}
+.photo.empty img{display:none}
+.photo.empty{display:flex;align-items:center;justify-content:center;border:1px dashed var(--gold);padding:1rem;text-align:center;color:var(--gold-deep);font-size:1.2rem}
+.photo.empty::after{content:"Qui va la vostra foto: " attr(data-slot)}
+.band{padding-top:4.5rem}
+#dove{border-top:0;padding-top:1rem}
+.dove-grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.dove-grid{grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}}
+.dove-grid .cols{grid-template-columns:1fr 1fr;max-width:none}
+.dove-grid .cols.single{grid-template-columns:1fr}
+/* Sondaggio */
+.poll{margin-top:1.5rem;padding-top:1.2rem;border-top:1px dashed var(--line)}
+.poll h3{font-size:1.7rem;color:var(--gold);margin-bottom:.4rem}
+.poll-btns{display:flex;gap:.8rem;flex-wrap:wrap;margin:.8rem 0 1.4rem}
+.poll-btns .btn{margin:0}
+.poll-btns .btn[disabled]{opacity:.55;cursor:default}
+.poll-btns .btn.mine{opacity:1;background:var(--gold-deep);color:var(--bg)}
+.bar{display:grid;grid-template-columns:4rem 1fr 7rem;gap:.8rem;align-items:center;margin:.5rem 0;max-width:36rem}
+.track{height:14px;background:var(--line)}
+.track i{display:block;height:100%;width:0;background:var(--gold);transition:width .6s}
+.bar b{font-weight:500;text-align:right;font-size:1.1rem}
+.poll-note{font-style:italic;color:var(--gold-deep);margin:.6rem 0 0;min-height:1.6em}
+@media(prefers-reduced-motion:reduce){.track i{transition:none}}
+footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--gold-deep);font-size:1.5rem}
+footer p{margin:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Sezioni del sito"><div class="wrap">
+  <a href="#dove">Dove</a>
+  <a href="#programma">Programma</a>
+  <a href="#arrivare">Come arrivare</a>
+  <a href="#dormire">Dove dormire</a>
+  <a href="#rsvp">Conferma</a>
+  <a href="#info">Info utili</a>
+  <a href="#fortuna">Black Metal o Reggetton?</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Chiara e Alessandro si Sposano!</h1>
+  <div class="meta">
+    <p>26 giugno 2027</p>
+    <p id="count" aria-live="polite"></p>
+  </div>
+</div></header>
+
+<section id="dove"><div class="wrap dove-grid">
+  <div>
+  <p class="lead">Dopo tanti anni insieme abbiamo deciso di fare il grande passo, e vogliamo farlo circondati dalle persone a cui vogliamo bene. Qui trovate tutto quello che serve per organizzarvi.</p>
+  <div class="cols single">
+    <div>
+      <h3>Cerimonia e ricevimento</h3>
+      <a class="name" href="https://www.google.com/maps/place/VILLA+TAVANARA+Dimora+Storica/@45.176401,11.119648,17z/data=!3m1!4b1!4m6!3m5!1s0x477f71a92d9b595b:0x6825ed0a03a0e19d!8m2!3d45.176401!4d11.1222229!16s%2Fg%2F11cjkpd24b?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Villa Tavanara</a>
+      <p>Via Tavanara, 3<br>37054 Nogara (VR)<br>Ritrovo alle 16:30<br> Parcheggio in struttura</p>
+    </div>
+  </div>
+  </div>
+  <figure class="photo portrait" data-slot="foto/coppia-1.jpeg">
+    <img src="foto/coppia-1.jpeg" alt="Chiara e Ale insieme" width="1000" height="1250" onerror="this.parentNode.classList.add('empty')">
+  </figure>
+</div></section>
+
+<section id="programma"><div class="wrap">
+  <h2>Programma della giornata</h2>
+  <ul class="rows">
+    <li><time>16:30</time><div><strong>Ritrovo</strong><br></div></li>
+    <li><time>17:00</time><div><strong>Cerimonia</strong><br></div></li>
+    <li><time>18:00</time><div><strong>Aperitivo</strong><br></div></li>
+    <li><time>19:30</time><div><strong>Si mangia!</strong><br></div></li>
+    <li><time>21:30</time><div><strong>Torta e festa</strong><br></div></li>
+  </ul>
+</div></section>
+
+<!--<section id="arrivare"><div class="wrap">
+  <h2>Come arrivare</h2>
+  <p><strong>In auto.</strong> Uscita autostradale di Città, poi seguire le indicazioni per la location. Parcheggio gratuito presso la struttura.</p>
+  <p><strong>In treno.</strong> Stazione di Città, a circa 15 minuti di auto. Sarà attiva una navetta dalla stazione (orari da definire).</p>
+</div></section> -->
+
+<section id="dormire"><div class="wrap">
+  <h2>Dove dormire</h2>
+  <p class="lead">In estate la zona si riempie in fretta: prenotate con anticipo.</p>
+  <div class="cols">
+    <div><h3>Hotel Esempio</h3><p>A 5 minuti dalla location.</p><p><a href="https://example.com" target="_blank" rel="noopener">Sito web</a></p></div>
+    <div><h3>B&amp;B Esempio</h3><p>Nel centro del paese. Citate il nostro nome per la tariffa dedicata.</p><p><a href="https://example.com" target="_blank" rel="noopener">Sito web</a></p></div>
+  </div>
+</div></section>
+
+<div class="wrap band">
+  <figure class="photo wide" data-slot="foto/coppia-2.jpeg">
+    <img src="foto/coppia-2.jpeg" alt="Chiara e Ale in un momento felice" width="1600" height="686" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+  </figure>
+</div>
+
+<section id="rsvp"><div class="wrap">
+  <h2>Confermate la vostra presenza</h2>
+  <p class="lead">Fateci sapere entro il <strong>30 aprile 2027</strong> se ci siete, quante persone siete e se avete intolleranze o esigenze alimentari.</p>
+  <p class="lead">Cosa vuol dire RSVP?</p>
+  <a class="btn solid" href="https://en.wikipedia.org/wiki/RSVP" target="_blank" rel="noopener">Voglio Scoprirlo!</a>
+  <!-- Incollate qui il link del vostro form al posto di INSERIRE-IL-LINK -->
+  <a class="btn solid" href="https://forms.gle/INSERIRE-IL-LINK" target="_blank" rel="noopener">Voglio RSVP!</a>
+</div></section>
+
+<section id="info"><div class="wrap">
+  <h2>Info utili</h2>
+  <!-- <details><summary>Dress code</summary><p>Elegante, ma comodo: la festa è all’aperto e in giardino. Meglio scarpe adatte a erba o ghiaia.</p></details>-->
+  <details><summary>Lista nozze e regali</summary><p>La vostra presenza è il regalo più bello. Se volete farci un pensiero, potete contribuire al nostro viaggio. IBAN: <em>da inserire</em>.</p>
+    <div class="poll" id="poll">
+      <h3>Dove andiamo in viaggio di nozze?</h3>
+      <p>Ale vuole andare in Cile, ma Chiara vuole andare in Perù. Aiutateci a scegliere!</p>
+      <div class="poll-btns">
+        <button class="btn" type="button" data-v="cile">Cile</button>
+        <button class="btn" type="button" data-v="peru">Perù</button>
+      </div>
+      <div class="bar"><span>Cile</span><div class="track"><i id="b-cile"></i></div><b id="n-cile">0%</b></div>
+      <div class="bar"><span>Perù</span><div class="track"><i id="b-peru"></i></div><b id="n-peru">0%</b></div>
+      <p class="poll-note" id="pnote" aria-live="polite"></p>
+    </div>
+  </details>
+  <details><summary>Possiamo portare i bambini?</summary><p>Certo! Indicateli nella conferma di presenza.</p></details>
+  <details><summary>E se piove?</summary><p>La location ha due sale interne per cena e festa, 'na sciccheria'.</p></details>
+  <!--<details><summary>Chi contattare per dubbi?</summary><p>Scriveteci a <a href="mailto:indirizzo@esempio.it">indirizzo@esempio.it</a> oppure chiamate il testimone: <a href="tel:+390000000000">+39 000 000 0000</a>.</p></details>-->
+</div></section>
+
+<section id="fortuna"><div class="wrap">
+  <h2>Black metal o reggaeton? Tenta la fortuna!</h2>
+  <p class="lead">Un clic, una canzone scelta a caso da noi. Che il destino sia con voi.</p>
+  <button class="btn solid" id="tenta" type="button">Tenta la fortuna</button>
+  <p class="hint" id="hint" aria-live="polite"></p>
+</div></section>
+
+<footer><div class="wrap"><p>Chiara e Alessandro · 26 giugno 2027</p></div></footer>
+
+<script>
+(function(){
+  /* Conto alla rovescia */
+  var DATE = new Date("2027-06-26T16:30:00+02:00");
+  var d = Math.ceil((DATE - new Date()) / 86400000);
+  document.getElementById("count").textContent =
+    d > 1 ? "Mancano " + d + " giorni" : d === 1 ? "Manca un giorno" : d === 0 ? "È oggi!" : "Grazie di aver festeggiato con noi";
+
+  /* Easter egg: incollate qui gli URL YouTube che volete. */
+  var BLACK_METAL = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ];
+  var REGGAETON = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ];
+  var ALL = BLACK_METAL.concat(REGGAETON), last = -1;
+
+  function rnd(n){
+    var a = new Uint32Array(1);
+    window.crypto.getRandomValues(a);
+    return a[0] % n;
+  }
+  document.getElementById("tenta").addEventListener("click", function(){
+    var i; do { i = rnd(ALL.length); } while (ALL.length > 1 && i === last);
+    last = i;
+    /* window.open parte subito dal clic, così il browser non lo blocca come popup */
+    var w = window.open(ALL[i], "_blank");
+    if (w) { w.opener = null; }
+    else { window.location.href = ALL[i]; }
+    document.getElementById("hint").textContent = "Il destino ha scelto. Se non si è aperto nulla, consentite i popup per questo sito.";
+  });
+})();
+
+/* Sondaggio live: incollate qui l'URL dell'app web di Google Apps Script (finisce con /exec) */
+(function(){
+  var POLL_URL = "https://script.google.com/macros/s/AKfycbxjsL7SoYTUDO_Erk2lQD-5jcAQg5DUgzgtjIcwP3HVmtLIsnvtHElTYZHAR7hUbuyM6g/exec";
+  var KEY = "votoViaggioNozze";
+  var box = document.getElementById("poll");
+  if (!box) return;
+  var g = function(i){ return document.getElementById(i); };
+  var btns = box.querySelectorAll("[data-v]"), note = g("pnote"), det = box.closest("details");
+  var active = POLL_URL.indexOf("script.google.com") > -1;
+  var mine = null, timer = null;
+  try { mine = localStorage.getItem(KEY); } catch(e){}
+
+  function draw(c){
+    var tot = (c.cile || 0) + (c.peru || 0);
+    ["cile","peru"].forEach(function(k){
+      var n = c[k] || 0, pct = tot ? Math.round(n * 100 / tot) : 0;
+      g("b-" + k).style.width = pct + "%";
+      g("n-" + k).textContent = pct + "% (" + n + ")";
+    });
+    note.textContent = tot ? "Voti totali: " + tot : "Nessun voto ancora: iniziate voi!";
+  }
+  function load(){
+    if (!active) { note.textContent = "Il sondaggio non è ancora attivo."; return Promise.resolve(); }
+    return fetch(POLL_URL + "?t=" + Date.now()).then(function(r){ return r.json(); }).then(draw)
+      .catch(function(){ note.textContent = "Risultati non disponibili al momento."; });
+  }
+  function lock(){
+    btns.forEach(function(b){ b.disabled = true; if (b.getAttribute("data-v") === mine) b.classList.add("mine"); });
+  }
+  if (mine) lock();
+
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      if (!active) {
+        note.textContent = "Il sondaggio non è ancora attivo.";
+        console.warn("Sondaggio: POLL_URL non è stato impostato con l’URL dello script Google (…/exec).");
+        return;
+      }
+      if (mine) return;
+      mine = b.getAttribute("data-v");
+      try { localStorage.setItem(KEY, mine); } catch(e){}
+      lock();
+      fetch(POLL_URL, { method: "POST", body: new URLSearchParams({ scelta: mine }) })
+        .then(function(r){ return r.json(); }).then(draw).catch(load);
+    });
+  });
+
+  /* aggiorna ogni 15 secondi finché la sezione è aperta */
+  function tick(){ if (det.open) { load(); timer = setTimeout(tick, 15000); } }
+  det.addEventListener("toggle", function(){ clearTimeout(timer); if (det.open) tick(); });
+})();
+</script>
+</body>
+</html>
